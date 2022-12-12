@@ -1,10 +1,12 @@
 server:
-  port: 8094
+  port: 8092
 
+  error:
+    include-details: always
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3300/invoices
+    url: jdbc:mysql://localhost:3300/shopping
     username: root
     password:
   jpa:
