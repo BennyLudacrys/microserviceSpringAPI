@@ -1,0 +1,17 @@
+server:
+  port: 8989
+
+
+spring:
+  cloud:
+    config:
+      server:
+         git:
+           uri: https://github.com/BennyLudacrys/microserviceSpringAPI
+           searchPaths: config-data
+           default-label: "main"
+
+  security:
+   user:
+     name: root
+     password: s3cr3t
