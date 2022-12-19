@@ -1,0 +1,29 @@
+server:
+  port: 8099
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8096/eureka/
+      
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: costumer-service
+          uri: lb://costumer-service
+          predicates:
+            - path=/customers/**
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - path=/products/**
+        - id: shopping-service
+          uri: lb://shopping-service
+          predicates:
+            - path=/invoices/**
+          
