@@ -25,3 +25,6 @@ managment:
     web:
       exposure:
         include: "*"
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
