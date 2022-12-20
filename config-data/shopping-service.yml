@@ -6,7 +6,7 @@ server:
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3300/shopping
+    url: jdbc:mysql://localhost:3300/invoices
     username: root
     password:
   jpa:
